@@ -1,0 +1,258 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+}
+
+/* Header Sticky */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #f8e6f0;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sticky-header h1 {
+  font-size: 2em;
+  color: #d66a9f;
+}
+
+.sticky-header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.sticky-header nav ul li a {
+  text-decoration: none;
+  color: #d66a9f;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.sticky-header nav ul li a:hover {
+  color: #b65585;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #fff0f5 0%, #fffaf0 100%);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text {
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.hero-text h2 {
+  color: #d66a9f;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #d66a9f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #b65585;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature h3 {
+  color: #d66a9f;
+  margin-bottom: 10px;
+}
+
+/* Shop Section */
+.shop {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.shop h2 {
+  text-align: center;
+  color: #d66a9f;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product {
+  background-color: #fff0f5;
+  border-radius: 10px;
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* About Section */
+.about {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about h2 {
+  color: #d66a9f;
+  margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff0f5;
+  border-radius: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #d66a9f;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #f0c0d0;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #d66a9f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #b65585;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8e6f0;
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
